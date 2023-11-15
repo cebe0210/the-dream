@@ -63,7 +63,13 @@
             <label for="fromCurrency">Devises de départ:</label>
             <select name="fromCurrency" id="fromCurrency" required>
                 <option value="EUR">Euro (EUR)</option>
-                <option value="USD">Dollar américain (USD)</option>
+                <option value="USD">Dollar Américain (USD)</option>
+                <option value="CHF">Franc Suisse (CHF)</option>
+                <option value="JPY">Yen Japonais (JPY)</option>
+                <option value="GBP">Livre Sterling Britannique (GBP)</option>
+                <option value="AUD">Dollar Australien (AUD)</option>
+                <option value="CAD">Dollar Canadien (CAD)</option>
+                <option value="CNY">Yuan Chinois (CNY)</option>
             </select>
         </div>
         <div class="input-section">
@@ -71,6 +77,12 @@
             <select name="toCurrency" id="toCurrency" required>
                 <option value="USD">Dollar américain (USD)</option>
                 <option value="EUR">Euro (EUR)</option>
+                <option value="CHF">Franc Suisse (CHF)</option>
+                <option value="JPY">Yen Japonais (JPY)</option>
+                <option value="GBP">Livre Sterling Britannique (GBP)</option>
+                <option value="AUD">Dollar Australien (AUD)</option>
+                <option value="CAD">Dollar Canadien (CAD)</option>
+                <option value="CNY">Yuan Chinois (CNY)</option>
             </select>
         </div>
         <div class="input-section">
