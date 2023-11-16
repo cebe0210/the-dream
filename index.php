@@ -1,58 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="icon.png">
+    <link rel="stylesheet" href="style.css?v=<?php echo time(); ?>">
     <title>Convertisseur de Devises</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f4f4f4;
-        }
-
-        .converter-container {
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            border-radius: 8px;
-            text-align: center;
-        }
-
-        form {
-            margin-bottom: 20px;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 8px;
-        }
-
-        select, input {
-            width: 100%;
-            padding: 8px;
-            margin-bottom: 16px;
-        }
-
-        button {
-            background-color: #4caf50;
-            color: #fff;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-
-        button:hover {
-            background-color: #45a049;
-        }
-    </style>
 </head>
 <body>
 
@@ -72,6 +25,10 @@
                 <option value="CNY">Yuan Chinois (CNY)</option>
             </select>
         </div>
+        <button type="button" id="swapCurrencies"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-repeat" viewBox="0 0 16 16">
+  <path d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z"/>
+  <path fill-rule="evenodd" d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z"/>
+</svg></button>
         <div class="input-section">
             <label for="toCurrency">Devises de destination:</label>
             <select name="toCurrency" id="toCurrency" required>
@@ -90,7 +47,7 @@
             <input type="number" name="amount" id="amount" required>
         </div>
         <button type="submit">Convertir</button>
-        <button type="button" id="swapCurrencies">Inverser</button>
+        
     </form>
 
     <?php
@@ -125,8 +82,10 @@
 
                 if (isset($rates[$toCurrency])) {
                     $conversionRate = $rates[$toCurrency];
+                    $rounded_conversion = number_format($conversionRate, 4);
                     $result = $amount * $conversionRate;
-                    echo "<p>{$amount} {$fromCurrency} équivaut à {$result} {$toCurrency} (Taux de conversion : {$conversionRate})</p>";
+                    $rounded_number = number_format($result, 2);
+                    echo "<p>{$amount} {$fromCurrency} équivaut à {$rounded_number} {$toCurrency} (Taux de conversion : {$rounded_conversion})</p>";
                 } else {
                     echo "Erreur : Taux de change non disponibles pour la devise de destination.";
                 }
@@ -141,14 +100,7 @@
 
 </div>
 
-<script>
-    document.getElementById('swapCurrencies').addEventListener('click', function () {
-        var fromCurrency = document.getElementById('fromCurrency').value;
-        var toCurrency = document.getElementById('toCurrency').value;
-        document.getElementById('fromCurrency').value = toCurrency;
-        document.getElementById('toCurrency').value = fromCurrency;
-    });
-</script>
+<script src="script.js"></script>
 
 </body>
 </html>
