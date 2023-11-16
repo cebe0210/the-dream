@@ -12,7 +12,10 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #520000 !important;
+    background-color: #1A1553 !important;
+    background-image: url(background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
     
 }
 .name {
@@ -20,7 +23,9 @@ body {
     font-weight: bold;
 }
 .btn-primary {
-    background-color: #000052 !important;
+    background-color: #DEB348 !important;
+    color: #1A1553 !important;
+    font-weight: bold !important;
 }
 .converter-container {
     background-color: #ffffff;
@@ -28,7 +33,7 @@ body {
     padding: 20px;
     border-radius: 8px;
     text-align: center;
-    color: black;
+    color: #121040;
     font-family: montserra;
 }
 .result {
@@ -52,7 +57,7 @@ select, input {
     padding: 8px;
     margin-bottom: 16px;
 }
-button {
+/* button {
     background-color: #4caf50;
     color: #fff;
     padding: 10px 20px;
@@ -60,7 +65,4 @@ button {
     border-radius: 4px;
     cursor: pointer;
     font-size: 16px;
-}
-button:hover {
-    background-color: #45a049;
-}
+} */
