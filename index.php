@@ -15,10 +15,10 @@
     <form action="" method="post">
         <div class="input-section">
         <div class="input-section">
-            <label for="amount">Montant à convertir:</label>
+            <label for="amount" class="name">Montant à convertir:</label>
             <input type="number" name="amount" id="amount" class="form-control form-control-lg" required value="0">
         </div>
-            <label for="fromCurrency">Devises de départ:</label>
+            <label for="fromCurrency" class="name">Devises de départ:</label>
             <select name="fromCurrency" id="fromCurrency" class="form-select form-select-lg mb-3" required>
                 <option value="EUR">Euro (EUR) </option>
                 <option value="USD">Dollar Américain (USD) </option>
@@ -35,7 +35,7 @@
   <path fill-rule="evenodd" d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z"/>
 </svg></button>
         <div class="input-section">
-            <label for="toCurrency">Devises de destination:</label>
+            <label for="toCurrency" class="name">Devises de destination:</label>
             <select name="toCurrency" id="toCurrency" class="form-select form-select-lg mb-3" required>
                 <option value="USD">Dollar américain (USD)</option>
                 <option value="EUR">Euro (EUR)</option>
