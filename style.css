@@ -13,7 +13,7 @@ body {
     align-items: center;
     height: 100vh;
     background-color: #1A1553 !important;
-    background-image: url(background.png);
+    background-image: url(background.webp);
     background-size: cover;
     background-repeat: no-repeat;
     
@@ -28,7 +28,7 @@ body {
     font-weight: bold !important;
 }
 .btn-primary :active{
-    transform: scale(0.9) !important;
+    transform: scale(0.9);
 }
 .converter-container {
     background-color: #ffffff;
@@ -60,12 +60,3 @@ select, input {
     padding: 8px;
     margin-bottom: 16px;
 }
-/* button {
-    background-color: #4caf50;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-} */
